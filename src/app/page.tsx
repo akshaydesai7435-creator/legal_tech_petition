@@ -98,7 +98,7 @@ export default function LandingPage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {petitions.map((petition, idx) => (
+          {petitions.slice(0, 3).map((petition, idx) => (
             <motion.div
               key={petition.id}
               initial={{ opacity: 0, y: 20 }}
@@ -120,8 +120,8 @@ export default function LandingPage() {
                 <CardContent className="p-5 pt-0 flex-1 flex flex-col justify-end">
                   <div className="space-y-3">
                     <div className="flex justify-between text-sm">
-                      <span className="font-medium text-primary">{petition.supporters.toLocaleString()} supporters</span>
-                      <span className="text-muted-foreground">Goal: {petition.goal.toLocaleString()}</span>
+                      <span className="font-medium text-primary">{petition.supporters.toLocaleString('en-IN')} supporters</span>
+                      <span className="text-muted-foreground">Goal: {petition.goal.toLocaleString('en-IN')}</span>
                     </div>
                     <Progress value={(petition.supporters / petition.goal) * 100} className="h-2 bg-primary/20" />
                   </div>

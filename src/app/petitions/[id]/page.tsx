@@ -85,8 +85,8 @@ export default function PetitionDetail({ params }: { params: Promise<{ id: strin
               <Card className="glass-card border-white/10 shadow-2xl shadow-primary/5">
                 <CardContent className="p-6">
                   <div className="mb-6">
-                    <h2 className="text-3xl font-bold mb-1">{petition.supporters.toLocaleString()}</h2>
-                    <p className="text-muted-foreground">Signatures collected of {petition.goal.toLocaleString()} goal</p>
+                    <h2 className="text-3xl font-bold mb-1">{petition.supporters.toLocaleString('en-IN')}</h2>
+                    <p className="text-muted-foreground">Signatures collected of {petition.goal.toLocaleString('en-IN')} goal</p>
                     <Progress value={(petition.supporters / petition.goal) * 100} className="h-3 mt-4 bg-primary/20" />
                   </div>
                   

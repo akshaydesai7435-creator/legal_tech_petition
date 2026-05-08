@@ -101,7 +101,7 @@ export default function PetitionsPage() {
               <CardContent className="p-5 pt-0 flex-1 flex flex-col justify-end">
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
-                    <span className="font-medium text-primary">{petition.supporters.toLocaleString()} supporters</span>
+                    <span className="font-medium text-primary">{petition.supporters.toLocaleString('en-IN')} supporters</span>
                     <span className="text-muted-foreground">{Math.round((petition.supporters / petition.goal) * 100)}% of goal</span>
                   </div>
                   <Progress value={(petition.supporters / petition.goal) * 100} className="h-2 bg-primary/20" />
